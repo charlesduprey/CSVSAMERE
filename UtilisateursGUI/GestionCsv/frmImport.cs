@@ -437,7 +437,7 @@ namespace CSV_import_export
 				// Generates the create table command.
 				// The first column of schema table contains the column names.
 				// The data type is nvarcher(4000) in all columns.
-                string ctStr = "INSERT INTO [" + tableOwner + "].[" + tableName + "] (nom,prenom,date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,id_classe,archive_elv) VALUES ('";
+                string ctStr = "INSERT INTO [" + tableOwner + "].[" + tableName + "] (nom,prenom,date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,archiver,id_classe) VALUES ('";
 
                 while (dtSchemaTable.Read())
                 {
@@ -467,7 +467,7 @@ namespace CSV_import_export
                     conn.Open();
                     command.ExecuteNonQuery();
                     conn.Close();
-                    ctStr = "INSERT INTO [" + tableOwner + "].[" + tableName + "] (nom,prenom,date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,id_classe,archive_elv) VALUES ('";
+                    ctStr = "INSERT INTO [" + tableOwner + "].[" + tableName + "] (nom,prenom,date_naissance,tel_eleve,tel_parent,tier_temps,commentaire_sante,archiver,id_classe) VALUES ('";
                     
                 }
                 return true;

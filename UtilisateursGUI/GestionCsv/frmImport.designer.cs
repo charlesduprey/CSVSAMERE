@@ -30,6 +30,7 @@ namespace CSV_import_export
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImport));
             this.label1 = new System.Windows.Forms.Label();
             this.txtFileToImport = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -320,6 +321,7 @@ namespace CSV_import_export
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtFileToImport);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(527, 515);
             this.Name = "frmImport";
             this.Text = "Import CSV";
